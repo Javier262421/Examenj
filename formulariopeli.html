@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .formulario {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        .formulario h2 {
+            text-align: center;
+        }
+
+        .formulario label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .formulario input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        .formulario button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .formulario button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="formulario">
+    <h2>Formulario</h2>
+
+    <form action="alta-registro-bdpeli.php" method="post">
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo" required>
+        <label for="director">Director</label>
+        <input type="text" id="director" name="director" required>
+        <label for="genero">Genero</label>
+        <input type="text" id="genero" name="genero" required>
+        <label for="anio">Año de pelicula</label>
+        <input type="number" min="0" step="1" id="anio" name="anio" required>
+        <label for="duracion">Duracion de pelicula</label>
+        <input type="number" min="0" step="1" id="duracion" name="duracion" required>
+
+        <button type="submit">Agregar</button>
+    </form>
+</div>
+
+</body>
+</html>
